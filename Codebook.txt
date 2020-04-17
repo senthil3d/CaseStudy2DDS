@@ -1,0 +1,71 @@
+## Case Study-02 on Employee Attrition
+## Project member name: Senthil Kumar
+## Document Name: Codebook
+## Document Purpose: To provide an overview of the variables used in the RMD file and serves the purpose of a data dictionary for the R code.
+
+## Packages used:-
+suppressMessages(library(tidyr))
+suppressMessages(library(plyr))
+suppressMessages(library(dplyr))
+suppressMessages(library(tidyverse))
+suppressMessages(library(ggthemes))
+suppressMessages(library(plotly))
+suppressMessages(library(GGally))
+suppressMessages(library(caret))
+suppressMessages(library(class))
+suppressMessages(library(e1071))
+suppressMessages(library(mice))
+suppressMessages(library(VIM))
+suppressMessages(library(ggmap))
+suppressMessages(library(maps))
+suppressMessages(library(mapdata))
+suppressMessages(library(sp))
+suppressMessages(library(maptools))
+suppressMessages(library(readr))
+suppressMessages(library(corrplot)) #visualization of correlation matrix
+suppressMessages(library(car)) #vif function
+suppressMessages(library(gridExtra)) # Grid Graphics
+suppressMessages(library(MASS)) # Modern Applied Statistics with S
+suppressMessages(library(dummies)) # to create dummy variable
+suppressMessages(library(ROCR)) # Threshold value
+suppressMessages(library(DMwR)) # SMOTE method package
+
+## Dataframe used:-
+employee # dataframe for capturing the CaseStudy2-data.csv file dataset on employee attrition
+employeeLeaving # dataframe on top of df employee variables, for capturing the employees who are attriting
+employee2 # dataframe on top of df employee variables, to temporarily hold & capturing employee datafame and apply data preparation or cleansing or datatype conversion
+employee3 # dataframe on top of df employee2 variables, after changing the categorical variables to dummy variable so that the variables can be used for fit in the model
+employee4 # dataframe on top of df employee3 variables, temporary df to apply SMOTE method to balanace the data
+BalancedData # dataframe on top of df employee3 variables, which has the balanaced data after applying the SMOTE method
+employeeCompSet # dataframe for capturing the "Competition Set" on No Attrition dataset
+employeeCompSet2 # dataframe on top of df employeeCompSet variables, to temporarily hold & capturing employee datafame and apply data preparation or cleansing or datatype conversion
+employeeCompSet3 # dataframe on top of df employeeCompSet2 variables, after changing the categorical variables to dummy variable so that the variables can be used for fit in the model
+mergedataemployeeCompSet # dataframe which is the final output results for "Competition Set" on No Attrition dataset, and is used to write the output csv file for submitting to the competition
+MonthlyIncomeCompSet # dataframe for capturing the "Competition Set" on No Monthly Incomes dataset having no Salary
+MonthlyIncomeCompSet2 # dataframe on top of df MonthlyIncomeCompSet variables, to temporarily hold & capturing employee datafame and apply data preparation or cleansing or datatype conversion
+MonthlyIncomeCompSet3 # dataframe on top of df MonthlyIncomeCompSet2 variables, after changing the categorical variables to dummy variable so that the variables can be used for fit in the model
+predictMonthlyIncomeCompSet # dataframe which is the final output results for "Competition Set" on No Monthly Incomes dataset, and is used to write the output csv file for submitting to the competition
+
+## Variables used:-
+# Changing the categorical variables to dummy variable so that the variables can be used for fit in the model
+dmy # holds the values after varables are converted from categorical variables to dummy variable
+vif_output # holds the vif values on checking Multicollinearity
+vif_res # holds the vif values on checking Multicollinearity
+train # holds training dataset after doing cross validation
+test # holds testing dataset after doing cross validation
+modeldata # holds training dataset after doing cross validation for Logistic Regression model
+validationdata # holds testing dataset after doing cross validation for Logistic Regression model
+logmodel # holds the classifications for attrition on the train dataset using Logistic Regression model
+log_pred # holds the classifications for attrition on the test dataset using Logistic Regression model
+masterAccuracy # holds the accuracy for the k-NN model from hyperparameter tuning
+masterSensitivity # holds the sensitivity for the k-NN model from hyperparameter tuning
+masterSpecificity # holds the specificity for the k-NN model from hyperparameter tuning
+classifications # holds the classifications for attrition on the train dataset using k-NN model
+CM # holds the confusionMatrix statistics after running the k-NN model
+Model1_fit # holds the predictions on monthly income on the train dataset using Linear Regression model
+Model1_Preds # holds the predictions on monthly income on the test dataset using Linear Regression model
+MSE # holds the MSE statistics for Linear Regression model
+RMSE # holds the RMSE (Root Mean square error) statistics for Linear Regression model
+
+## Note on Warning messages during the RMD execution:-
+All Warnings during RMD execution can safetly be ignored.
