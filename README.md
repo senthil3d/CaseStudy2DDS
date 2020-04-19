@@ -43,5 +43,6 @@ The major product of the project work was centered across classifying the employ
 5. PPT (Powerpoint) presentation slides, which has all the plots and inferences drawn for the project.
 6. Case2PredictionsSenthilKumarAttrition.csv file - Attrition output submission for the competition dataset to classify attrition of employees.
 7. Case2PredictionsSenthilKumarSalary.csv file - Monthly income output submission for the competition dataset to predict monthly income of employees.
+8. Youtube video link - https://www.youtube.com/watch?v=L7ez0mqpky8
 
 
